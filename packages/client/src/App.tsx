@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 import { Button } from "./components/ui/button";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <p className="font-bold"> {message} </p>
       <Button>Click me</Button>
     </>
-  );
+  )
 }
 
 export default App;
