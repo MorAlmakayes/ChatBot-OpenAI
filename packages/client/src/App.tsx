@@ -12,10 +12,10 @@ const [message, setMessage] = useState(' ');
   
   return(
     <>
-    <p className= "font-bold"> {message} </p>
-    <Button>"Click me</Button>
+        <p className= "font-bold"> {message} </p>
+         <Button>Click me</Button>
     </>
-  )
+  );
 
 }
 
