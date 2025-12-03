@@ -1,14 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
+import { Button } from "./components/ui/button";
 
 function App() {
-  const [massage,setMassage] = useState(' ');
+  const [message, setMessage] = useState(" ");
 
-  useEffect(()=> {
-    fetch('/api/hello')
-      .then(res => res.json())
-      .then(data =>setMassage(data.massage))
+  useEffect(() => {
+    fetch("/api/hello")
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message));
   }, []);
-  return <p>{massage}</p>
+
+  return (
+    <>
+      <p className="font-bold"> {message} </p>
+      <Button>Click me</Button>
+    </>
+  );
 }
 
-export default App
+export default App;
