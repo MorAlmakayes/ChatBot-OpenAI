@@ -28,7 +28,7 @@ const ChatBot = () => {
       setMessages((prev) => [...prev, { content: prompt, role: "user" }]);
       setIsBotTyping(true);
       setError("");
-      //popAudio.play();
+      popAudio.play();
 
       const { data } = await axios.post<ChatResponse>("/api/chat", {
         prompt,
